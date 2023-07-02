@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Recursive&display=swap');
+
+
+.forecast{
+    border-radius: 10px;
+    background-color: #c46026;
+    color: whitesmoke;
+    padding: 10px;
+    margin: 10px;
+    font-family: 'Recursive', sans-serif;
+    font-size: 19px;
+    width: 15%;
+}
+
+.card{
+    padding-top: 40px;
+    padding-left: 35px;
+    display: flex;
+    flex-direction:column;
+}
+.flex-details{
+    display: flex;
+    justify-content: space-between;
+}
+
+.title{
+    padding-bottom: 10px;
+    padding-right: 35px;
+}
