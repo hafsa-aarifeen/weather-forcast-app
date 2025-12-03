@@ -1,5 +1,4 @@
 import React from "react";
-
 import { Grid, Button } from "semantic-ui-react";
 import "./forecast.css";
 
@@ -13,8 +12,6 @@ import {
   faSmog,
 } from "@fortawesome/free-solid-svg-icons";
 
-import styled from "styled-components";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Forecast = (props) => {
@@ -23,7 +20,6 @@ const Forecast = (props) => {
   const mapped = [];
 
   const today = new Date();
-
   const nextSevenDays = [];
 
   let day = 0;
@@ -52,6 +48,7 @@ const Forecast = (props) => {
 
   const results = mapped?.map((item, index) => {
     let weatherIcon = null;
+
     switch (item.description) {
       case "Thunderstorm":
         weatherIcon = <FontAwesomeIcon icon={faBolt} />;
@@ -80,10 +77,18 @@ const Forecast = (props) => {
         <Grid columns={1}>
           <Grid.Column>
             <p>{item.todayDate}</p>
+
+            {/* ICON — now actually used */}
             <div className="flex-details">
-              <p>Temprature</p>
+              <p>Weather</p>
+              <p>{weatherIcon}</p>
+            </div>
+
+            <div className="flex-details">
+              <p>Temperature</p>
               <p>{item.temperature} &deg;C</p>
             </div>
+
             <div className="flex-details">
               <p>Pressure</p>
               <p>{item.pressure} hPa</p>
@@ -93,8 +98,8 @@ const Forecast = (props) => {
               <p>{item.humidity} %</p>
             </div>
             <div className="flex-details">
-              <p>Cludiness</p>
-              <p>{item.clouds} </p>
+              <p>Cloudiness</p>
+              <p>{item.clouds}</p>
             </div>
           </Grid.Column>
         </Grid>
@@ -108,13 +113,11 @@ const Forecast = (props) => {
         ForeCast
         <p>
           <Button
-            class="ui button"
+            className="ui button"
             floated="right"
             onClick={handleViewMore}
-            content="Primary"
-          >
-            View More
-          </Button>
+            content="View More"
+          />
         </p>
       </div>
 
