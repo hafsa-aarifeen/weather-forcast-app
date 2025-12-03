@@ -18,9 +18,6 @@ import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Forecast = (props) => {
-  const WeatherIcon = styled.div`
-    color: whitesmoke;
-  `;
   const { forecast, setNumOfDays } = props;
 
   const mapped = [];

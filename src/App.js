@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import NavigationBar from "./components/NavigationBar";
 import LoginForm from "./components/LoginForm";
-import Display from "./components/Display";
+// import Display from "./components/Display";
 
 const App = () => {
   return (
